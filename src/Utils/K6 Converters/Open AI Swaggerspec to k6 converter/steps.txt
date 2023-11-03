@@ -1,0 +1,14 @@
+1. Pull docker image:
+
+ docker pull openapitools/openapi-generator-cli
+
+ 2. Run below command to generate k6 script from provided json file in command:
+
+  docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate -i https://httpbin.test.k6.io/spec.json -g k6 -o /local/k6-test/ --skip-validate-spec
+
+3. Things to know from above command:
+
+The -i : parameter is used to feed the specification document to the generator. You can use a file for that purpose. This way you should make sure that it resides in the same directory on your host (/home/user/Desktop/myspec.json), and you address it from the container side: /local/myspec.json. You also have the option to specify a URL that points to a file. Note that the file can be in either JSON or YAML format.
+The -g : parameter specifies the generator to use, that is k6.
+The -o : parameter specifies the directory to store the generated files. After conversion, the files can be accessed from /home/user/Desktop/k6-test/ on your host.
+In case you get a lot of errors from validation, just skip them with --skip-validate-spec. These errors are often related to differences between Swagger and OpenAPI specification.

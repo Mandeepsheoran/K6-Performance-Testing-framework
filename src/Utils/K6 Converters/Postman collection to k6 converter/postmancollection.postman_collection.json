@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "2cdb004c-1add-4968-a4f3-e2d92a40124f",
+		"name": "postmancollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14400431"
+	},
+	"item": [
+		{
+			"name": "getcontactdetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://test.k6.io/contacts.php",
+					"protocol": "https",
+					"host": [
+						"test",
+						"k6",
+						"io"
+					],
+					"path": [
+						"contacts.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newslisting",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://test.k6.io/news.php",
+					"protocol": "https",
+					"host": [
+						"test",
+						"k6",
+						"io"
+					],
+					"path": [
+						"news.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrievemessage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://test.k6.io/my_messages.php",
+					"protocol": "https",
+					"host": [
+						"test",
+						"k6",
+						"io"
+					],
+					"path": [
+						"my_messages.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

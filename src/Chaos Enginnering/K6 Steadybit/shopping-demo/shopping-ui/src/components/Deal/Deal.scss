@@ -1,0 +1,37 @@
+@import 'src/styles/colors';
+
+.bg-available {
+    background-color: $color-success;
+}
+
+.bg-unavailable {
+    background-color: $color-warning;
+}
+
+.bg-unknown {
+    background-color: $color-neutral-700;
+}
+
+.deal {
+    cursor: pointer;
+
+    &__title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__body {
+        display: flex;
+    }
+
+    &__overlay {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__price {
+        white-space: nowrap;
+        margin-left: auto;
+    }
+}

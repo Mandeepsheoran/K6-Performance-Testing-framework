@@ -1,0 +1,27 @@
+name: K6 Workflow
+
+on:
+ push:
+  branches: main
+ workflow_dispatch:
+
+jobs:
+  k6_local_test:
+    name: k6 local test run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run local k6 test
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: src/Tests/E2E Test/Threshold/summary.js
+
+      - name: Store performance test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: k6-summary-report
+          path: summary.json
+

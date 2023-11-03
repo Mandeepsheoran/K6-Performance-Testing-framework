@@ -1,0 +1,11 @@
+{
+    "reporterOptions": 
+        {
+        "endpoint": "http://localhost:8080/api/v1",
+        "token": "113d4f50-a366-40b2-aafc-0e63252e64a7",
+        "launch": "K6 Performance Test Launch",
+        "project": "superadmin_personal",
+        "description": "K6 Performance Test for my tests",
+         "publishResult": true
+      }
+}
